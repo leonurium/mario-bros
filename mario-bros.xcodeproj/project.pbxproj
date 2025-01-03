@@ -8,10 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		5BE31B81F6752508BDD5020C /* Pods_mario_bros.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFE020D6D2114BE2B04B71A9 /* Pods_mario_bros.framework */; };
-		7B0EF2012D27E61B004DC953 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0EF2002D27E61B004DC953 /* LoginCoordinator.swift */; };
 		7B0EF2042D27EF23004DC953 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0EF2032D27EF23004DC953 /* Coordinator.swift */; };
 		7B0EF2062D27EF31004DC953 /* CoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0EF2052D27EF31004DC953 /* CoordinatorView.swift */; };
 		7B0EF2092D27F5FC004DC953 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0EF2082D27F5FC004DC953 /* OnboardingView.swift */; };
+		7B0EF20B2D27F75D004DC953 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0EF20A2D27F75D004DC953 /* LoginView.swift */; };
+		7B0EF20E2D27F8A6004DC953 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0EF20D2D27F8A6004DC953 /* HomeView.swift */; };
+		7B0EF2122D27FBA9004DC953 /* SwiftWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0EF2112D27FBA9004DC953 /* SwiftWebView.swift */; };
 		7B913F942D27D4B600E94CE8 /* mario_brosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B913F932D27D4B600E94CE8 /* mario_brosApp.swift */; };
 		7B913F962D27D4B600E94CE8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B913F952D27D4B600E94CE8 /* ContentView.swift */; };
 		7B913F982D27D4B700E94CE8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B913F972D27D4B700E94CE8 /* Assets.xcassets */; };
@@ -21,10 +23,12 @@
 /* Begin PBXFileReference section */
 		4F9A995F8DF8761D75ACE239 /* Pods-mario-bros.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mario-bros.release.xcconfig"; path = "Target Support Files/Pods-mario-bros/Pods-mario-bros.release.xcconfig"; sourceTree = "<group>"; };
 		71147FD84446ED393A682862 /* Pods-mario-bros.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mario-bros.debug.xcconfig"; path = "Target Support Files/Pods-mario-bros/Pods-mario-bros.debug.xcconfig"; sourceTree = "<group>"; };
-		7B0EF2002D27E61B004DC953 /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
 		7B0EF2032D27EF23004DC953 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		7B0EF2052D27EF31004DC953 /* CoordinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorView.swift; sourceTree = "<group>"; };
 		7B0EF2082D27F5FC004DC953 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		7B0EF20A2D27F75D004DC953 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		7B0EF20D2D27F8A6004DC953 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		7B0EF2112D27FBA9004DC953 /* SwiftWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftWebView.swift; sourceTree = "<group>"; };
 		7B913F902D27D4B600E94CE8 /* mario-bros.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mario-bros.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B913F932D27D4B600E94CE8 /* mario_brosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mario_brosApp.swift; sourceTree = "<group>"; };
 		7B913F952D27D4B600E94CE8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -57,6 +61,7 @@
 		7B0EF1FE2D27E5FB004DC953 /* app-feature */ = {
 			isa = PBXGroup;
 			children = (
+				7B0EF20C2D27F7B8004DC953 /* feature-home */,
 				7B0EF2072D27F54A004DC953 /* feature-onboarding */,
 				7B0EF1FF2D27E605004DC953 /* feature-login */,
 			);
@@ -66,7 +71,7 @@
 		7B0EF1FF2D27E605004DC953 /* feature-login */ = {
 			isa = PBXGroup;
 			children = (
-				7B0EF2002D27E61B004DC953 /* LoginCoordinator.swift */,
+				7B0EF20A2D27F75D004DC953 /* LoginView.swift */,
 			);
 			path = "feature-login";
 			sourceTree = "<group>";
@@ -86,6 +91,29 @@
 				7B0EF2082D27F5FC004DC953 /* OnboardingView.swift */,
 			);
 			path = "feature-onboarding";
+			sourceTree = "<group>";
+		};
+		7B0EF20C2D27F7B8004DC953 /* feature-home */ = {
+			isa = PBXGroup;
+			children = (
+				7B0EF20D2D27F8A6004DC953 /* HomeView.swift */,
+			);
+			path = "feature-home";
+			sourceTree = "<group>";
+		};
+		7B0EF20F2D27FB55004DC953 /* app-utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "app-utils";
+			sourceTree = "<group>";
+		};
+		7B0EF2102D27FB71004DC953 /* app-component-views */ = {
+			isa = PBXGroup;
+			children = (
+				7B0EF2112D27FBA9004DC953 /* SwiftWebView.swift */,
+			);
+			path = "app-component-views";
 			sourceTree = "<group>";
 		};
 		7B27E83AAA897BA73452A41E /* Pods */ = {
@@ -118,6 +146,8 @@
 		7B913F922D27D4B600E94CE8 /* mario-bros */ = {
 			isa = PBXGroup;
 			children = (
+				7B0EF2102D27FB71004DC953 /* app-component-views */,
+				7B0EF20F2D27FB55004DC953 /* app-utils */,
 				7B0EF2022D27EF13004DC953 /* app-coordinator */,
 				7B0EF1FE2D27E5FB004DC953 /* app-feature */,
 				7B913F932D27D4B600E94CE8 /* mario_brosApp.swift */,
@@ -234,9 +264,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B0EF2042D27EF23004DC953 /* Coordinator.swift in Sources */,
+				7B0EF20B2D27F75D004DC953 /* LoginView.swift in Sources */,
 				7B0EF2062D27EF31004DC953 /* CoordinatorView.swift in Sources */,
-				7B0EF2012D27E61B004DC953 /* LoginCoordinator.swift in Sources */,
+				7B0EF2122D27FBA9004DC953 /* SwiftWebView.swift in Sources */,
 				7B0EF2092D27F5FC004DC953 /* OnboardingView.swift in Sources */,
+				7B0EF20E2D27F8A6004DC953 /* HomeView.swift in Sources */,
 				7B913F962D27D4B600E94CE8 /* ContentView.swift in Sources */,
 				7B913F942D27D4B600E94CE8 /* mario_brosApp.swift in Sources */,
 			);

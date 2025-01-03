@@ -8,8 +8,23 @@
 import SwiftUI
 
 struct OnboardingView: View {
+    
+    @EnvironmentObject private var coordinator: Coordinator
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        TabView {
+            Text("Hello From Me!")
+                .tag(0)
+            Text("Hello From I!")
+                .tag(1)
+            Text("Hello John Doe!")
+                .tag(2)
+            Button("Done") {
+                coordinator.present(fullScreenCover: .home)
+            }
+                .tag(3)
+        }
+        .tabViewStyle(PageTabViewStyle())
     }
 }
 

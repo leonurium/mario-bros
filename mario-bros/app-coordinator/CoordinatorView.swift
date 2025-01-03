@@ -12,7 +12,7 @@ struct CoordinatorView: View {
     var body: some View {
         NavigationStack(path: $coordinator.path) {
             /// initial view
-            coordinator.build(page: .main)
+            coordinator.build(fullScreenCover: .onboarding)
             
                 /// for navihation push and pop
                 .navigationDestination(for: Page.self) { page in

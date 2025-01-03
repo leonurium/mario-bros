@@ -24,8 +24,8 @@ enum Sheet: String, Identifiable {
 }
 
 enum FullScreenCover: String, Identifiable {
-    case splashScreen
     case onboarding
+    case home
     
     var id: String {
         self.rawValue
@@ -85,8 +85,10 @@ class Coordinator: ObservableObject {
     @ViewBuilder
     func build(fullScreenCover: FullScreenCover) -> some View {
         switch fullScreenCover {
-        case .splashScreen:
-            ContentView()
+        case .onboarding:
+            OnboardingView()
+        case .home:
+            HomeView()
         }
     }
 }
