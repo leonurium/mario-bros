@@ -37,9 +37,10 @@ class Coordinator: ObservableObject {
     @Published var path = NavigationPath() // need ios 16
     @Published var sheet: Sheet?
     @Published var fullScreenCover: FullScreenCover?
+    @Published var currentWebURL: URL? // Track current URL for SwiftWebView
     
     func push(page: Page) {
-        path.append(page)
+        path.append(page) // need ios 16
     }
     
     func present(sheet: Sheet) {
@@ -50,12 +51,17 @@ class Coordinator: ObservableObject {
         self.fullScreenCover = fullScreenCover
     }
     
+    func updateWebURL(_ url: URL?) {
+        currentWebURL = url
+        print("Updated Web URL: \(url?.absoluteString ?? "Unknown")")
+    }
+    
     func pop() {
-        path.removeLast()
+        path.removeLast() // need ios 16
     }
     
     func popToRoot() {
-        path.removeLast(path.count)
+        path.removeLast(path.count) // need ios 16
     }
     
     func dismissSheet() {
@@ -64,6 +70,10 @@ class Coordinator: ObservableObject {
     
     func dismissFullScreenCover() {
         fullScreenCover = nil
+    }
+    
+    func exitWebView() {
+        currentWebURL = nil
     }
     
     @ViewBuilder
@@ -78,7 +88,7 @@ class Coordinator: ObservableObject {
     func build(sheet: Sheet) -> some View {
         switch sheet {
         case .loginSheet:
-            ContentView()
+            LoginView()
         }
     }
     

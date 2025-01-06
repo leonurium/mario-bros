@@ -12,8 +12,8 @@ struct ContentView: View {
     var body: some View {
         VStack {
             Image(systemName: "globe")
-                .imageScale(.large) // need ios 15
-                .foregroundStyle(.tint) //need ios 15
+                .imageScale(.large)
+//                .foregroundStyle(.tint) //need ios 15
             Text("Hello, world!")
         }
         .padding()

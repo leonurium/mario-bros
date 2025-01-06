@@ -13,6 +13,7 @@ struct CoordinatorView: View {
         NavigationStack(path: $coordinator.path) {
             /// initial view
             coordinator.build(fullScreenCover: .onboarding)
+//            coordinator.build(sheet: .loginSheet)
             
                 /// for navihation push and pop
                 .navigationDestination(for: Page.self) { page in
