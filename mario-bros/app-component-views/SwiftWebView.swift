@@ -21,7 +21,7 @@ enum SwiftWebViewObserveValueName: String, CaseIterable {
 struct SwiftWebView: UIViewRepresentable {
     let urlString: String
     @Binding var isLoading: Bool
-    @ObservedObject var coordinator: Coordinator
+    var coordinator: (any CoordinatorProtocol)?
     let messageHandler: ((SwiftWebViewUserContentControllerName, String) -> Void)?
     
     internal class WebViewCoordinator: NSObject, WKNavigationDelegate, WKScriptMessageHandler {
@@ -33,12 +33,12 @@ struct SwiftWebView: UIViewRepresentable {
         
         func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
             parent.isLoading = true
-            parent.coordinator.updateWebURL(webView.url)
+//            parent.coordinator.updateWebURL(webView.url)
         }
         
         func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
             parent.isLoading = false
-            parent.coordinator.updateWebURL(webView.url)
+//            parent.coordinator.updateWebURL(webView.url)
         }
         
         func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {

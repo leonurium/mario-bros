@@ -7,9 +7,8 @@
 
 import SwiftUI
 
-struct HomeView: View {
-    
-    @EnvironmentObject private var coordinator: Coordinator
+struct HomeView: View, CoordinatingProtocol {
+    var coordinator: (any CoordinatorProtocol)?
     
     @State private var isLoading: Bool = false
 
@@ -19,10 +18,6 @@ struct HomeView: View {
                 ProgressView()
                     .progressViewStyle(CircularProgressViewStyle())
             }
-
-            Text("Current URL: \(coordinator.currentWebURL?.absoluteString ?? "None")")
-                .font(.footnote)
-                .padding()
 
             SwiftWebView(
                 urlString: "https://dev-games-app.rctiplus.com/",
