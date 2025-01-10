@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct HomeView: View, CoordinatingProtocol {
-    var coordinator: (any CoordinatorProtocol)?
+    var coordinator: AppCoordinator
     
     @State private var isLoading: Bool = false
 
@@ -33,5 +33,5 @@ struct HomeView: View, CoordinatingProtocol {
 }
 
 #Preview {
-    HomeView()
+    HomeView(coordinator: AppCoordinator())
 }

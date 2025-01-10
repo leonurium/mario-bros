@@ -9,13 +9,12 @@ import SwiftUI
 
 @main
 struct mario_brosApp: App {
-    private var coordinator = AppCoordinator()
+    @StateObject private var coordinator = AppCoordinator()
     
     var body: some Scene {
         WindowGroup {
-            NavigationView {
-                coordinator.start()
-            }
+            AppView()
+                .environmentObject(coordinator)
         }
     }
 }

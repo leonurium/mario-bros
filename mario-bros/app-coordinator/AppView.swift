@@ -8,13 +8,12 @@
 import SwiftUI
 
 struct AppView: View, CoordinatingProtocol {
-    var coordinator: (any CoordinatorProtocol)?
+    @EnvironmentObject var coordinator: AppCoordinator
     
     var body: some View {
-        Text("")
-            .onAppear {
-                coordinator?.start()
-            }
+        NavigationView {
+            coordinator.start()
+        }
     }
 }
 

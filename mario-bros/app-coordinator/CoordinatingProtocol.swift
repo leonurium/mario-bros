@@ -8,5 +8,5 @@
 import Foundation
 
 protocol CoordinatingProtocol {
-    var coordinator: (any CoordinatorProtocol)? { get set }
+    var coordinator: AppCoordinator { get }
 }

@@ -12,6 +12,6 @@ import SwiftUI
 protocol CoordinatorProtocol: ObservableObject {
     var navigationController: UINavigationController? { get set }
     
-    func start() -> View
+    func start() -> AnyView
     func eventOccured(event: CoordinatorEvent)
 }

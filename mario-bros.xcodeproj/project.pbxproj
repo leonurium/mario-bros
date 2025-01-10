@@ -20,6 +20,7 @@
 		7B2B75FB2D31088100036510 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2B75FA2D31088100036510 /* HomeCoordinator.swift */; };
 		7B2B75FD2D3108ED00036510 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2B75FC2D3108ED00036510 /* AppCoordinator.swift */; };
 		7B2B75FF2D310B1000036510 /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2B75FE2D310B1000036510 /* AppView.swift */; };
+		7B2B76012D31370A00036510 /* OnboardingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2B76002D31370A00036510 /* OnboardingCoordinator.swift */; };
 		7B3A60832D2BC7FD009964FE /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3A60822D2BC7FD009964FE /* LoginViewModel.swift */; };
 		7B913F942D27D4B600E94CE8 /* mario_brosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B913F932D27D4B600E94CE8 /* mario_brosApp.swift */; };
 		7B913F962D27D4B600E94CE8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B913F952D27D4B600E94CE8 /* ContentView.swift */; };
@@ -42,6 +43,7 @@
 		7B2B75FA2D31088100036510 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
 		7B2B75FC2D3108ED00036510 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		7B2B75FE2D310B1000036510 /* AppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
+		7B2B76002D31370A00036510 /* OnboardingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCoordinator.swift; sourceTree = "<group>"; };
 		7B3A60822D2BC7FD009964FE /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		7B913F902D27D4B600E94CE8 /* mario-bros.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mario-bros.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B913F932D27D4B600E94CE8 /* mario_brosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mario_brosApp.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				7B0EF2082D27F5FC004DC953 /* OnboardingView.swift */,
+				7B2B76002D31370A00036510 /* OnboardingCoordinator.swift */,
 			);
 			path = "feature-onboarding";
 			sourceTree = "<group>";
@@ -297,6 +300,7 @@
 				7B2B75FB2D31088100036510 /* HomeCoordinator.swift in Sources */,
 				7B0EF20E2D27F8A6004DC953 /* HomeView.swift in Sources */,
 				7B913F962D27D4B600E94CE8 /* ContentView.swift in Sources */,
+				7B2B76012D31370A00036510 /* OnboardingCoordinator.swift in Sources */,
 				7B913F942D27D4B600E94CE8 /* mario_brosApp.swift in Sources */,
 				7B3A60832D2BC7FD009964FE /* LoginViewModel.swift in Sources */,
 			);

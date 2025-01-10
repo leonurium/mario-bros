@@ -98,7 +98,7 @@ class Coordinator: ObservableObject {
         case .onboarding:
             OnboardingView()
         case .home:
-            HomeView()
+            HomeView(coordinator: AppCoordinator())
         }
     }
 }
