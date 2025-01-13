@@ -2,103 +2,55 @@
 //  Coordinator.swift
 //  mario-bros
 //
-//  Created by leonurium on 03/01/25.
+//  Created by leonurium on 13/01/25.
 //
 
+import Foundation
 import SwiftUI
 
-enum Page: String, Identifiable {
-    case main
+open class Coordinator<CoordinatingRouter: CoordinatorRouter>: ObservableObject {
     
-    var id: String {
-        self.rawValue
-    }
-}
-
-enum Sheet: String, Identifiable {
-    case loginSheet
+    public let navigationController: UINavigationController
+    public let startingCoordinatorRouter: CoordinatingRouter?
     
-    var id: String {
-        self.rawValue
-    }
-}
-
-enum FullScreenCover: String, Identifiable {
-    case onboarding
-    case home
-    
-    var id: String {
-        self.rawValue
-    }
-}
-
-class Coordinator: ObservableObject {
-    
-    @Published var path = NavigationPath() // need ios 16
-    @Published var sheet: Sheet?
-    @Published var fullScreenCover: FullScreenCover?
-    @Published var currentWebURL: URL? // Track current URL for SwiftWebView
-    
-    func push(page: Page) {
-        path.append(page) // need ios 16
+    public init(navigationController: UINavigationController = .init(), startingCoordinatorRouter: CoordinatingRouter? = nil) {
+        self.navigationController = navigationController
+        self.startingCoordinatorRouter = startingCoordinatorRouter
     }
     
-    func present(sheet: Sheet) {
-        self.sheet = sheet
+    public func start() {
+        guard let router = startingCoordinatorRouter else { return }
+        show(router)
     }
     
-    func present(fullScreenCover: FullScreenCover) {
-        self.fullScreenCover = fullScreenCover
-    }
-    
-    func updateWebURL(_ url: URL?) {
-        currentWebURL = url
-        print("Updated Web URL: \(url?.absoluteString ?? "Unknown")")
-    }
-    
-    func pop() {
-        path.removeLast() // need ios 16
-    }
-    
-    func popToRoot() {
-        path.removeLast(path.count) // need ios 16
-    }
-    
-    func dismissSheet() {
-        sheet = nil
-    }
-    
-    func dismissFullScreenCover() {
-        fullScreenCover = nil
-    }
-    
-    func exitWebView() {
-        currentWebURL = nil
-    }
-    
-    @ViewBuilder
-    func build(page: Page) -> some View {
-        switch page {
-        case .main:
-            ContentView()
+    public func show(_ coordinatorRouter: CoordinatingRouter, animated: Bool = true) {
+        let view = coordinatorRouter.view()
+        let viewWithCoordinator = view.environmentObject(self)
+        let viewController = UIHostingController(rootView: viewWithCoordinator)
+        switch coordinatorRouter.transition {
+        case .push:
+            navigationController.pushViewController(viewController, animated: animated)
+        case .formSheet:
+            viewController.modalPresentationStyle = .formSheet
+            navigationController.present(viewController, animated: animated)
+        case .fullScreen:
+            viewController.modalPresentationStyle = .fullScreen
+            navigationController.present(viewController, animated: animated)
         }
     }
     
-    @ViewBuilder
-    func build(sheet: Sheet) -> some View {
-        switch sheet {
-        case .loginSheet:
-            LoginView()
-        }
+    public func pop(animated: Bool = true) {
+        navigationController.popViewController(animated: animated)
     }
     
-    @ViewBuilder
-    func build(fullScreenCover: FullScreenCover) -> some View {
-        switch fullScreenCover {
-        case .onboarding:
-            OnboardingView()
-        case .home:
-            HomeView(coordinator: AppCoordinator())
+    public func popToRoot(animated: Bool = true) {
+        navigationController.popToRootViewController(animated: animated)
+    }
+    
+    open func dismiss(animated: Bool = true) {
+        navigationController.dismiss(animated: true) { [weak self] in
+            /// because there is a leak in UIHostingControllers that prevents from deallocation
+            self?.navigationController.viewControllers = []
         }
     }
 }

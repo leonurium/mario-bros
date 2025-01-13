@@ -7,20 +7,33 @@
 
 import Foundation
 import SwiftUI
-import UIKit
 
-class OnboardingCoordinator: CoordinatorProtocol, ObservableObject {
-    var navigationController: UINavigationController?
+
+public enum OnboardingCoordinator: CoordinatorRouter {
+    case home
+    case login
+    case onboarding
     
-    func start() -> AnyView {
-        let view = OnboardingView()
-        return AnyView(view.environmentObject(self))
+    public var transition: CoordinatorRouterTransitionStyle {
+        switch self {
+        case .onboarding:
+            return .fullScreen
+        case .home:
+            return .fullScreen
+        case .login:
+            return .push
+        }
     }
     
-    func eventOccured(event: CoordinatorEvent) {
-        switch event {
-        case .didClickBack:
-            navigationController?.popViewController(animated: true)
+    @ViewBuilder
+    public func view() -> some View {
+        switch self {
+        case .onboarding:
+            OnboardingView()
+        case .home:
+            HomeView()
+        case .login:
+            LoginView()
         }
     }
 }

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct OnboardingView: View {
     
-    @EnvironmentObject private var coordinator: Coordinator
+    @EnvironmentObject private var coordinator: Coordinator<OnboardingCoordinator>
     
     var body: some View {
         TabView {
@@ -20,11 +20,12 @@ struct OnboardingView: View {
             Text("Hello John Doe!")
                 .tag(2)
             Button("Done") {
-                coordinator.present(fullScreenCover: .home)
+                coordinator.show(.home)
             }
                 .tag(3)
         }
         .tabViewStyle(PageTabViewStyle())
+        .environmentObject(coordinator)
     }
 }
 

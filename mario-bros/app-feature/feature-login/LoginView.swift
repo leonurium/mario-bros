@@ -8,8 +8,6 @@
 import SwiftUI
 
 struct LoginView: View {
-    
-    @EnvironmentObject private var coordinator: Coordinator
     @StateObject private var viewModel = LoginViewModel()
 
     var body: some View {

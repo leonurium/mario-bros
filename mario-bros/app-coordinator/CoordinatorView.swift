@@ -2,38 +2,23 @@
 //  CoordinatorView.swift
 //  mario-bros
 //
-//  Created by leonurium on 03/01/25.
+//  Created by leonurium on 13/01/25.
 //
 
+import Foundation
 import SwiftUI
 
-struct CoordinatorView: View {
-    @StateObject private var coordinator = Coordinator()
-    var body: some View {
-        NavigationStack(path: $coordinator.path) {
-            /// initial view
-            coordinator.build(fullScreenCover: .onboarding)
-//            coordinator.build(sheet: .loginSheet)
-            
-                /// for navihation push and pop
-                .navigationDestination(for: Page.self) { page in
-                    coordinator.build(page: page)
-                }
-            
-                /// for navigation sheet from bottom, able to scroll to dismiss
-                .sheet(item: $coordinator.sheet) { sheet in
-                    coordinator.build(sheet: sheet)
-                }
-            
-                /// for navigation sheet from bottom but full screen
-                .fullScreenCover(item: $coordinator.fullScreenCover) { fullScreenCover in
-                    coordinator.build(fullScreenCover: fullScreenCover)
-                }
+struct CoordinatorView: UIViewControllerRepresentable {
+    @ObservedObject var coordinator: Coordinator<OnboardingCoordinator>
+    
+    func makeUIViewController(context: Context) -> UINavigationController {
+        DispatchQueue.main.async {
+            coordinator.start()
         }
-        .environmentObject(coordinator)
+        return coordinator.navigationController
     }
-}
-
-#Preview {
-    CoordinatorView()
+    
+    func updateUIViewController(_ uiViewController: UINavigationController, context: Context) {
+        
+    }
 }

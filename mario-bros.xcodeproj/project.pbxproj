@@ -8,20 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		5BE31B81F6752508BDD5020C /* Pods_mario_bros.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFE020D6D2114BE2B04B71A9 /* Pods_mario_bros.framework */; };
-		7B0EF2042D27EF23004DC953 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0EF2032D27EF23004DC953 /* Coordinator.swift */; };
-		7B0EF2062D27EF31004DC953 /* CoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0EF2052D27EF31004DC953 /* CoordinatorView.swift */; };
 		7B0EF2092D27F5FC004DC953 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0EF2082D27F5FC004DC953 /* OnboardingView.swift */; };
 		7B0EF20B2D27F75D004DC953 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0EF20A2D27F75D004DC953 /* LoginView.swift */; };
 		7B0EF20E2D27F8A6004DC953 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0EF20D2D27F8A6004DC953 /* HomeView.swift */; };
 		7B0EF2122D27FBA9004DC953 /* SwiftWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0EF2112D27FBA9004DC953 /* SwiftWebView.swift */; };
-		7B2B75F52D31070700036510 /* CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2B75F42D31070700036510 /* CoordinatorProtocol.swift */; };
-		7B2B75F72D31076C00036510 /* CoordinatorEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2B75F62D31076C00036510 /* CoordinatorEvent.swift */; };
-		7B2B75F92D3107C500036510 /* CoordinatingProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2B75F82D3107C500036510 /* CoordinatingProtocol.swift */; };
 		7B2B75FB2D31088100036510 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2B75FA2D31088100036510 /* HomeCoordinator.swift */; };
-		7B2B75FD2D3108ED00036510 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2B75FC2D3108ED00036510 /* AppCoordinator.swift */; };
-		7B2B75FF2D310B1000036510 /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2B75FE2D310B1000036510 /* AppView.swift */; };
 		7B2B76012D31370A00036510 /* OnboardingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2B76002D31370A00036510 /* OnboardingCoordinator.swift */; };
 		7B3A60832D2BC7FD009964FE /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3A60822D2BC7FD009964FE /* LoginViewModel.swift */; };
+		7B3B71FD2D3519EB0004397D /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3B71FC2D3519EB0004397D /* Coordinator.swift */; };
+		7B3B71FF2D351A160004397D /* CoordinatorRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3B71FE2D351A160004397D /* CoordinatorRouter.swift */; };
+		7B3B72012D351A430004397D /* CoordinatorRouterTransitionStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3B72002D351A430004397D /* CoordinatorRouterTransitionStyle.swift */; };
+		7B3B72032D351E530004397D /* CoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3B72022D351E530004397D /* CoordinatorView.swift */; };
 		7B913F942D27D4B600E94CE8 /* mario_brosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B913F932D27D4B600E94CE8 /* mario_brosApp.swift */; };
 		7B913F962D27D4B600E94CE8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B913F952D27D4B600E94CE8 /* ContentView.swift */; };
 		7B913F982D27D4B700E94CE8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B913F972D27D4B700E94CE8 /* Assets.xcassets */; };
@@ -31,20 +28,17 @@
 /* Begin PBXFileReference section */
 		4F9A995F8DF8761D75ACE239 /* Pods-mario-bros.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mario-bros.release.xcconfig"; path = "Target Support Files/Pods-mario-bros/Pods-mario-bros.release.xcconfig"; sourceTree = "<group>"; };
 		71147FD84446ED393A682862 /* Pods-mario-bros.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mario-bros.debug.xcconfig"; path = "Target Support Files/Pods-mario-bros/Pods-mario-bros.debug.xcconfig"; sourceTree = "<group>"; };
-		7B0EF2032D27EF23004DC953 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
-		7B0EF2052D27EF31004DC953 /* CoordinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorView.swift; sourceTree = "<group>"; };
 		7B0EF2082D27F5FC004DC953 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		7B0EF20A2D27F75D004DC953 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		7B0EF20D2D27F8A6004DC953 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		7B0EF2112D27FBA9004DC953 /* SwiftWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftWebView.swift; sourceTree = "<group>"; };
-		7B2B75F42D31070700036510 /* CoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorProtocol.swift; sourceTree = "<group>"; };
-		7B2B75F62D31076C00036510 /* CoordinatorEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorEvent.swift; sourceTree = "<group>"; };
-		7B2B75F82D3107C500036510 /* CoordinatingProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatingProtocol.swift; sourceTree = "<group>"; };
 		7B2B75FA2D31088100036510 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
-		7B2B75FC2D3108ED00036510 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
-		7B2B75FE2D310B1000036510 /* AppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
 		7B2B76002D31370A00036510 /* OnboardingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCoordinator.swift; sourceTree = "<group>"; };
 		7B3A60822D2BC7FD009964FE /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		7B3B71FC2D3519EB0004397D /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		7B3B71FE2D351A160004397D /* CoordinatorRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorRouter.swift; sourceTree = "<group>"; };
+		7B3B72002D351A430004397D /* CoordinatorRouterTransitionStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorRouterTransitionStyle.swift; sourceTree = "<group>"; };
+		7B3B72022D351E530004397D /* CoordinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorView.swift; sourceTree = "<group>"; };
 		7B913F902D27D4B600E94CE8 /* mario-bros.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mario-bros.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B913F932D27D4B600E94CE8 /* mario_brosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mario_brosApp.swift; sourceTree = "<group>"; };
 		7B913F952D27D4B600E94CE8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -96,13 +90,10 @@
 		7B0EF2022D27EF13004DC953 /* app-coordinator */ = {
 			isa = PBXGroup;
 			children = (
-				7B0EF2032D27EF23004DC953 /* Coordinator.swift */,
-				7B0EF2052D27EF31004DC953 /* CoordinatorView.swift */,
-				7B2B75F42D31070700036510 /* CoordinatorProtocol.swift */,
-				7B2B75F62D31076C00036510 /* CoordinatorEvent.swift */,
-				7B2B75F82D3107C500036510 /* CoordinatingProtocol.swift */,
-				7B2B75FC2D3108ED00036510 /* AppCoordinator.swift */,
-				7B2B75FE2D310B1000036510 /* AppView.swift */,
+				7B3B71FC2D3519EB0004397D /* Coordinator.swift */,
+				7B3B71FE2D351A160004397D /* CoordinatorRouter.swift */,
+				7B3B72002D351A430004397D /* CoordinatorRouterTransitionStyle.swift */,
+				7B3B72022D351E530004397D /* CoordinatorView.swift */,
 			);
 			path = "app-coordinator";
 			sourceTree = "<group>";
@@ -287,19 +278,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7B0EF2042D27EF23004DC953 /* Coordinator.swift in Sources */,
 				7B0EF20B2D27F75D004DC953 /* LoginView.swift in Sources */,
-				7B2B75F52D31070700036510 /* CoordinatorProtocol.swift in Sources */,
-				7B2B75F72D31076C00036510 /* CoordinatorEvent.swift in Sources */,
-				7B2B75F92D3107C500036510 /* CoordinatingProtocol.swift in Sources */,
-				7B0EF2062D27EF31004DC953 /* CoordinatorView.swift in Sources */,
-				7B2B75FD2D3108ED00036510 /* AppCoordinator.swift in Sources */,
 				7B0EF2122D27FBA9004DC953 /* SwiftWebView.swift in Sources */,
-				7B2B75FF2D310B1000036510 /* AppView.swift in Sources */,
+				7B3B72012D351A430004397D /* CoordinatorRouterTransitionStyle.swift in Sources */,
+				7B3B71FD2D3519EB0004397D /* Coordinator.swift in Sources */,
 				7B0EF2092D27F5FC004DC953 /* OnboardingView.swift in Sources */,
+				7B3B71FF2D351A160004397D /* CoordinatorRouter.swift in Sources */,
 				7B2B75FB2D31088100036510 /* HomeCoordinator.swift in Sources */,
 				7B0EF20E2D27F8A6004DC953 /* HomeView.swift in Sources */,
 				7B913F962D27D4B600E94CE8 /* ContentView.swift in Sources */,
+				7B3B72032D351E530004397D /* CoordinatorView.swift in Sources */,
 				7B2B76012D31370A00036510 /* OnboardingCoordinator.swift in Sources */,
 				7B913F942D27D4B600E94CE8 /* mario_brosApp.swift in Sources */,
 				7B3A60832D2BC7FD009964FE /* LoginViewModel.swift in Sources */,
@@ -445,7 +433,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.2;
@@ -483,7 +471,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.2;

@@ -9,12 +9,11 @@ import SwiftUI
 
 @main
 struct mario_brosApp: App {
-    @StateObject private var coordinator = AppCoordinator()
-    
+    @StateObject private var coordinator = Coordinator<OnboardingCoordinator>(startingCoordinatorRouter: .onboarding)
+        
     var body: some Scene {
         WindowGroup {
-            AppView()
-                .environmentObject(coordinator)
+            CoordinatorView(coordinator: coordinator)
         }
     }
 }

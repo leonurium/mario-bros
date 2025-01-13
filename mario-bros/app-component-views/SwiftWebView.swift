@@ -21,7 +21,6 @@ enum SwiftWebViewObserveValueName: String, CaseIterable {
 struct SwiftWebView: UIViewRepresentable {
     let urlString: String
     @Binding var isLoading: Bool
-    var coordinator: (any CoordinatorProtocol)?
     let messageHandler: ((SwiftWebViewUserContentControllerName, String) -> Void)?
     
     internal class WebViewCoordinator: NSObject, WKNavigationDelegate, WKScriptMessageHandler {

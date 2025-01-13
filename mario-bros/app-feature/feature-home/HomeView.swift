@@ -7,9 +7,7 @@
 
 import SwiftUI
 
-struct HomeView: View, CoordinatingProtocol {
-    var coordinator: AppCoordinator
-    
+struct HomeView: View {
     @State private var isLoading: Bool = false
 
     var body: some View {
@@ -22,7 +20,6 @@ struct HomeView: View, CoordinatingProtocol {
             SwiftWebView(
                 urlString: "https://dev-games-app.rctiplus.com/",
                 isLoading: $isLoading,
-                coordinator: coordinator,
                 messageHandler: { (userContent, message) in
                     print(message)
                 }
@@ -33,5 +30,5 @@ struct HomeView: View, CoordinatingProtocol {
 }
 
 #Preview {
-    HomeView(coordinator: AppCoordinator())
+    HomeView()
 }

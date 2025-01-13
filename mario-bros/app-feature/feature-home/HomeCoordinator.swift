@@ -6,5 +6,23 @@
 //
 
 import Foundation
-import UIKit
+import SwiftUI
 
+public enum HomeCoordinator: CoordinatorRouter {
+    case home
+    
+    public var transition: CoordinatorRouterTransitionStyle {
+        switch self {
+        case .home:
+            return .push
+        }
+    }
+    
+    @ViewBuilder
+    public func view() -> some View {
+        switch self {
+        case .home:
+            HomeView()
+        }
+    }
+}
