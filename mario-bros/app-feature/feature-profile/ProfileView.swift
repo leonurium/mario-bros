@@ -15,6 +15,7 @@ struct ProfileView: View {
         Button("This Profile, Go To Settings") {
             coordinator.dismiss(animated: true, completion: {
                 coordinator.show(.settings)
+                    .environmentObject(coordinator)
             })
         }
     }

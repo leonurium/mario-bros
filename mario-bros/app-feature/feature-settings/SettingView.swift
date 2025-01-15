@@ -8,8 +8,11 @@
 import SwiftUI
 
 struct SettingView: View {
+    @EnvironmentObject private var coordinator: Coordinator<MainCoordinator>
     var body: some View {
-        Text("Hello, Setting!")
+        Button("Back") {
+            coordinator.pop()
+        }
     }
 }
 

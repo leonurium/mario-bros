@@ -23,7 +23,7 @@ open class Coordinator<CoordinatingRouter: CoordinatorRouter>: ObservableObject 
         show(route)
     }
     
-    public func show(_ coordinatorRouter: CoordinatingRouter, animated: Bool = true) {
+    public func show(_ coordinatorRouter: CoordinatingRouter, animated: Bool = true) -> some View {
         let view = coordinatorRouter.view()
         let viewWithCoordinator = view.environmentObject(self)
         let viewController = UIHostingController(rootView: viewWithCoordinator)
@@ -37,6 +37,7 @@ open class Coordinator<CoordinatingRouter: CoordinatorRouter>: ObservableObject 
             viewController.modalPresentationStyle = .fullScreen
             navigationController.present(viewController, animated: animated)
         }
+        return coordinatorRouter.view()
     }
     
     public func pop(animated: Bool = true) {
