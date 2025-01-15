@@ -11,29 +11,19 @@ import SwiftUI
 open class Coordinator<CoordinatingRouter: CoordinatorRouter>: ObservableObject {
     
     public let navigationController: UINavigationController
-    @Published public var currentCoordinatorRouter: CoordinatingRouter?
+    public let startingCoordinatorRouter: CoordinatingRouter?
     
     public init(navigationController: UINavigationController = .init(), startingCoordinatorRouter: CoordinatingRouter? = nil) {
         self.navigationController = navigationController
-        self.currentCoordinatorRouter = startingCoordinatorRouter
+        self.startingCoordinatorRouter = startingCoordinatorRouter
     }
     
     public func start() {
-        guard let router = currentCoordinatorRouter else { return }
-        show(router)
+        guard let route = startingCoordinatorRouter else { return }
+        show(route)
     }
     
-    public func switchCoordinator<NewCoordinatingRouter: CoordinatorRouter>(
-            to newCoordinator: Coordinator<NewCoordinatingRouter>,
-            startingRoute: NewCoordinatingRouter
-    ) {
-        // Remove existing view controllers to clean up the navigation stack
-        navigationController.viewControllers = []
-        newCoordinator.currentCoordinatorRouter = startingRoute
-        newCoordinator.start()
-    }
-    
-    public func show(_ coordinatorRouter: CoordinatingRouter, animated: Bool = true) -> some View {
+    public func show(_ coordinatorRouter: CoordinatingRouter, animated: Bool = true) {
         let view = coordinatorRouter.view()
         let viewWithCoordinator = view.environmentObject(self)
         let viewController = UIHostingController(rootView: viewWithCoordinator)
@@ -47,8 +37,6 @@ open class Coordinator<CoordinatingRouter: CoordinatorRouter>: ObservableObject 
             viewController.modalPresentationStyle = .fullScreen
             navigationController.present(viewController, animated: animated)
         }
-        let coordinatorView = CoordinatorView(navigationController: self.navigationController)
-        return coordinatorView
     }
     
     public func pop(animated: Bool = true) {

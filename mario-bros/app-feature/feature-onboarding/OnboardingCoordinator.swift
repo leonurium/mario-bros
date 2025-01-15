@@ -10,7 +10,6 @@ import SwiftUI
 
 
 public enum OnboardingCoordinator: CoordinatorRouter {
-    case home
     case login
     case onboarding
     
@@ -18,8 +17,6 @@ public enum OnboardingCoordinator: CoordinatorRouter {
         switch self {
         case .onboarding:
             return .fullScreen
-        case .home:
-            return .push
         case .login:
             return .push
         }
@@ -30,8 +27,6 @@ public enum OnboardingCoordinator: CoordinatorRouter {
         switch self {
         case .onboarding:
             OnboardingView()
-        case .home:
-            HomeView()
         case .login:
             LoginView()
         }

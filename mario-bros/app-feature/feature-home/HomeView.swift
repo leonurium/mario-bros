@@ -9,9 +9,13 @@ import SwiftUI
 
 struct HomeView: View {
     @State private var isLoading: Bool = false
+    @State var isOnboarding: Bool
 
     var body: some View {
         VStack {
+            if isOnboarding {
+                Text("IsOnboarding")
+            }
             if isLoading {
                 ProgressView()
                     .progressViewStyle(CircularProgressViewStyle())
@@ -30,5 +34,5 @@ struct HomeView: View {
 }
 
 #Preview {
-    HomeView()
+    HomeView(isOnboarding: false)
 }

@@ -18,11 +18,12 @@
 		7B3B71FD2D3519EB0004397D /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3B71FC2D3519EB0004397D /* Coordinator.swift */; };
 		7B3B71FF2D351A160004397D /* CoordinatorRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3B71FE2D351A160004397D /* CoordinatorRouter.swift */; };
 		7B3B72012D351A430004397D /* CoordinatorRouterTransitionStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3B72002D351A430004397D /* CoordinatorRouterTransitionStyle.swift */; };
-		7B3B72032D351E530004397D /* CoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3B72022D351E530004397D /* CoordinatorView.swift */; };
 		7B913F942D27D4B600E94CE8 /* mario_brosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B913F932D27D4B600E94CE8 /* mario_brosApp.swift */; };
 		7B913F962D27D4B600E94CE8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B913F952D27D4B600E94CE8 /* ContentView.swift */; };
 		7B913F982D27D4B700E94CE8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B913F972D27D4B700E94CE8 /* Assets.xcassets */; };
 		7B913F9C2D27D4B700E94CE8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B913F9B2D27D4B700E94CE8 /* Preview Assets.xcassets */; };
+		7BDFFE922D37BDA40080DEE8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BDFFE912D37BDA40080DEE8 /* AppDelegate.swift */; };
+		7BDFFE942D37BDD80080DEE8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BDFFE932D37BDD80080DEE8 /* SceneDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,13 +39,14 @@
 		7B3B71FC2D3519EB0004397D /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		7B3B71FE2D351A160004397D /* CoordinatorRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorRouter.swift; sourceTree = "<group>"; };
 		7B3B72002D351A430004397D /* CoordinatorRouterTransitionStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorRouterTransitionStyle.swift; sourceTree = "<group>"; };
-		7B3B72022D351E530004397D /* CoordinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorView.swift; sourceTree = "<group>"; };
 		7B913F902D27D4B600E94CE8 /* mario-bros.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mario-bros.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B913F932D27D4B600E94CE8 /* mario_brosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mario_brosApp.swift; sourceTree = "<group>"; };
 		7B913F952D27D4B600E94CE8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7B913F972D27D4B700E94CE8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7B913F992D27D4B700E94CE8 /* mario_bros.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = mario_bros.entitlements; sourceTree = "<group>"; };
 		7B913F9B2D27D4B700E94CE8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		7BDFFE912D37BDA40080DEE8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7BDFFE932D37BDD80080DEE8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		EFE020D6D2114BE2B04B71A9 /* Pods_mario_bros.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mario_bros.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -93,7 +95,6 @@
 				7B3B71FC2D3519EB0004397D /* Coordinator.swift */,
 				7B3B71FE2D351A160004397D /* CoordinatorRouter.swift */,
 				7B3B72002D351A430004397D /* CoordinatorRouterTransitionStyle.swift */,
-				7B3B72022D351E530004397D /* CoordinatorView.swift */,
 			);
 			path = "app-coordinator";
 			sourceTree = "<group>";
@@ -170,6 +171,8 @@
 				7B913F972D27D4B700E94CE8 /* Assets.xcassets */,
 				7B913F992D27D4B700E94CE8 /* mario_bros.entitlements */,
 				7B913F9A2D27D4B700E94CE8 /* Preview Content */,
+				7BDFFE912D37BDA40080DEE8 /* AppDelegate.swift */,
+				7BDFFE932D37BDD80080DEE8 /* SceneDelegate.swift */,
 			);
 			path = "mario-bros";
 			sourceTree = "<group>";
@@ -282,12 +285,13 @@
 				7B0EF2122D27FBA9004DC953 /* SwiftWebView.swift in Sources */,
 				7B3B72012D351A430004397D /* CoordinatorRouterTransitionStyle.swift in Sources */,
 				7B3B71FD2D3519EB0004397D /* Coordinator.swift in Sources */,
+				7BDFFE922D37BDA40080DEE8 /* AppDelegate.swift in Sources */,
+				7BDFFE942D37BDD80080DEE8 /* SceneDelegate.swift in Sources */,
 				7B0EF2092D27F5FC004DC953 /* OnboardingView.swift in Sources */,
 				7B3B71FF2D351A160004397D /* CoordinatorRouter.swift in Sources */,
 				7B2B75FB2D31088100036510 /* HomeCoordinator.swift in Sources */,
 				7B0EF20E2D27F8A6004DC953 /* HomeView.swift in Sources */,
 				7B913F962D27D4B600E94CE8 /* ContentView.swift in Sources */,
-				7B3B72032D351E530004397D /* CoordinatorView.swift in Sources */,
 				7B2B76012D31370A00036510 /* OnboardingCoordinator.swift in Sources */,
 				7B913F942D27D4B600E94CE8 /* mario_brosApp.swift in Sources */,
 				7B3A60832D2BC7FD009964FE /* LoginViewModel.swift in Sources */,

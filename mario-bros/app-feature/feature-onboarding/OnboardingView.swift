@@ -10,6 +10,7 @@ import SwiftUI
 struct OnboardingView: View {
     
     @EnvironmentObject private var coordinator: Coordinator<OnboardingCoordinator>
+    @StateObject private var homeCoordinator = Coordinator<HomeCoordinator>(startingCoordinatorRouter: .home(isAlreadyOnboarding: true))
     
     var body: some View {
         TabView {
@@ -20,9 +21,7 @@ struct OnboardingView: View {
             Text("Hello John Doe!")
                 .tag(2)
             Button("Done") {
-                coordinator.dismiss(animated: true) {
-                    coordinator.show(.home)
-                }
+                homeCoordinator.start()
             }
                 .tag(3)
         }

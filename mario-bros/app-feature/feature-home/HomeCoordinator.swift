@@ -9,11 +9,11 @@ import Foundation
 import SwiftUI
 
 public enum HomeCoordinator: CoordinatorRouter {
-    case home
+    case home(isAlreadyOnboarding: Bool)
     
     public var transition: CoordinatorRouterTransitionStyle {
         switch self {
-        case .home:
+        case .home(isAlreadyOnboarding: let isOnboarding):
             return .push
         }
     }
@@ -21,8 +21,8 @@ public enum HomeCoordinator: CoordinatorRouter {
     @ViewBuilder
     public func view() -> some View {
         switch self {
-        case .home:
-            HomeView()
+        case .home(isAlreadyOnboarding: let isOnboarding):
+            HomeView(isOnboarding: isOnboarding)
         }
     }
 }
