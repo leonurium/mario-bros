@@ -24,6 +24,10 @@
 		7B913F9C2D27D4B700E94CE8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B913F9B2D27D4B700E94CE8 /* Preview Assets.xcassets */; };
 		7BDFFE922D37BDA40080DEE8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BDFFE912D37BDA40080DEE8 /* AppDelegate.swift */; };
 		7BDFFE942D37BDD80080DEE8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BDFFE932D37BDD80080DEE8 /* SceneDelegate.swift */; };
+		7BDFFE972D37CD000080DEE8 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BDFFE962D37CD000080DEE8 /* MainView.swift */; };
+		7BDFFE992D37CD310080DEE8 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BDFFE982D37CD310080DEE8 /* MainCoordinator.swift */; };
+		7BDFFE9E2D37CD750080DEE8 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BDFFE9D2D37CD750080DEE8 /* ProfileView.swift */; };
+		7BDFFEA12D37CE470080DEE8 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BDFFEA02D37CE470080DEE8 /* SettingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +51,10 @@
 		7B913F9B2D27D4B700E94CE8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7BDFFE912D37BDA40080DEE8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7BDFFE932D37BDD80080DEE8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		7BDFFE962D37CD000080DEE8 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		7BDFFE982D37CD310080DEE8 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		7BDFFE9D2D37CD750080DEE8 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		7BDFFEA02D37CE470080DEE8 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 		EFE020D6D2114BE2B04B71A9 /* Pods_mario_bros.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mario_bros.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -73,6 +81,9 @@
 		7B0EF1FE2D27E5FB004DC953 /* app-feature */ = {
 			isa = PBXGroup;
 			children = (
+				7BDFFE9F2D37CE360080DEE8 /* feature-settings */,
+				7BDFFE9C2D37CD580080DEE8 /* feature-profile */,
+				7BDFFE952D37CCE20080DEE8 /* feature-main */,
 				7B0EF20C2D27F7B8004DC953 /* feature-home */,
 				7B0EF2072D27F54A004DC953 /* feature-onboarding */,
 				7B0EF1FF2D27E605004DC953 /* feature-login */,
@@ -185,6 +196,31 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		7BDFFE952D37CCE20080DEE8 /* feature-main */ = {
+			isa = PBXGroup;
+			children = (
+				7BDFFE962D37CD000080DEE8 /* MainView.swift */,
+				7BDFFE982D37CD310080DEE8 /* MainCoordinator.swift */,
+			);
+			path = "feature-main";
+			sourceTree = "<group>";
+		};
+		7BDFFE9C2D37CD580080DEE8 /* feature-profile */ = {
+			isa = PBXGroup;
+			children = (
+				7BDFFE9D2D37CD750080DEE8 /* ProfileView.swift */,
+			);
+			path = "feature-profile";
+			sourceTree = "<group>";
+		};
+		7BDFFE9F2D37CE360080DEE8 /* feature-settings */ = {
+			isa = PBXGroup;
+			children = (
+				7BDFFEA02D37CE470080DEE8 /* SettingView.swift */,
+			);
+			path = "feature-settings";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -284,16 +320,20 @@
 				7B0EF20B2D27F75D004DC953 /* LoginView.swift in Sources */,
 				7B0EF2122D27FBA9004DC953 /* SwiftWebView.swift in Sources */,
 				7B3B72012D351A430004397D /* CoordinatorRouterTransitionStyle.swift in Sources */,
+				7BDFFEA12D37CE470080DEE8 /* SettingView.swift in Sources */,
 				7B3B71FD2D3519EB0004397D /* Coordinator.swift in Sources */,
 				7BDFFE922D37BDA40080DEE8 /* AppDelegate.swift in Sources */,
 				7BDFFE942D37BDD80080DEE8 /* SceneDelegate.swift in Sources */,
 				7B0EF2092D27F5FC004DC953 /* OnboardingView.swift in Sources */,
 				7B3B71FF2D351A160004397D /* CoordinatorRouter.swift in Sources */,
 				7B2B75FB2D31088100036510 /* HomeCoordinator.swift in Sources */,
+				7BDFFE9E2D37CD750080DEE8 /* ProfileView.swift in Sources */,
+				7BDFFE992D37CD310080DEE8 /* MainCoordinator.swift in Sources */,
 				7B0EF20E2D27F8A6004DC953 /* HomeView.swift in Sources */,
 				7B913F962D27D4B600E94CE8 /* ContentView.swift in Sources */,
 				7B2B76012D31370A00036510 /* OnboardingCoordinator.swift in Sources */,
 				7B913F942D27D4B600E94CE8 /* mario_brosApp.swift in Sources */,
+				7BDFFE972D37CD000080DEE8 /* MainView.swift in Sources */,
 				7B3A60832D2BC7FD009964FE /* LoginViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

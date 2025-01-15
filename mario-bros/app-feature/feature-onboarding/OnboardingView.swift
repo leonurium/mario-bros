@@ -21,8 +21,8 @@ struct OnboardingView: View {
                 .tag(2)
             Button("Done") {
                 coordinator.dismiss(animated: true, completion: {
-                    let homeCoordinator: Coordinator<HomeCoordinator> = .init(navigationController: coordinator.navigationController, startingCoordinatorRouter: .home(isAlreadyOnboarding: true))
-                    homeCoordinator.start()
+                    let coordinator: Coordinator<MainCoordinator> = .init(navigationController: coordinator.navigationController, startingCoordinatorRouter: .main)
+                    coordinator.start()
                 })
             }
                 .tag(3)

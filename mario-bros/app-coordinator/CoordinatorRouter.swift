@@ -10,12 +10,12 @@ import SwiftUI
 
 public protocol CoordinatorRouter {
     
-    associatedtype ContentView: View
+    associatedtype V: View
 
     var transition: CoordinatorRouterTransitionStyle { get }
     
     /// Creates and returns a view of assosiated type
     ///
     @ViewBuilder
-    func view() -> ContentView
+    func view() -> V
 }

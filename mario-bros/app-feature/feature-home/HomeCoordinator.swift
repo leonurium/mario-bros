@@ -14,7 +14,7 @@ public enum HomeCoordinator: CoordinatorRouter {
     public var transition: CoordinatorRouterTransitionStyle {
         switch self {
         case .home(isAlreadyOnboarding: _):
-            return .push
+            return .fullScreen
         }
     }
     
