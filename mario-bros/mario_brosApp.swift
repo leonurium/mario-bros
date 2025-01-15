@@ -13,7 +13,7 @@ struct mario_brosApp: App {
         
     var body: some Scene {
         WindowGroup {
-            CoordinatorView(coordinator: coordinator)
+            coordinator.show(.onboarding)
         }
     }
 }

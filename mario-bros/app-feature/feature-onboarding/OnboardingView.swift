@@ -20,7 +20,9 @@ struct OnboardingView: View {
             Text("Hello John Doe!")
                 .tag(2)
             Button("Done") {
-                coordinator.show(.home)
+                coordinator.dismiss(animated: true) {
+                    coordinator.show(.home)
+                }
             }
                 .tag(3)
         }

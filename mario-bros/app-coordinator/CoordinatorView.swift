@@ -9,13 +9,10 @@ import Foundation
 import SwiftUI
 
 struct CoordinatorView: UIViewControllerRepresentable {
-    @ObservedObject var coordinator: Coordinator<OnboardingCoordinator>
+    var navigationController: UINavigationController
     
     func makeUIViewController(context: Context) -> UINavigationController {
-        DispatchQueue.main.async {
-            coordinator.start()
-        }
-        return coordinator.navigationController
+        return navigationController
     }
     
     func updateUIViewController(_ uiViewController: UINavigationController, context: Context) {
