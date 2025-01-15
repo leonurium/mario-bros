@@ -18,7 +18,7 @@ public enum OnboardingCoordinator: CoordinatorRouter {
         case .onboarding:
             return .fullScreen
         case .login:
-            return .push
+            return .fullScreen
         }
     }
     
