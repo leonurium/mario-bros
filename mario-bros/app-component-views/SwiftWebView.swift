@@ -32,12 +32,10 @@ struct SwiftWebView: UIViewRepresentable {
         
         func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
             parent.isLoading = true
-//            parent.coordinator.updateWebURL(webView.url)
         }
         
         func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
             parent.isLoading = false
-//            parent.coordinator.updateWebURL(webView.url)
         }
         
         func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
@@ -97,6 +95,11 @@ struct SwiftWebView: UIViewRepresentable {
         let userContents = SwiftWebViewUserContentControllerName.allCases
         for userContent in userContents {
             uiView.configuration.userContentController.removeScriptMessageHandler(forName: userContent.rawValue)
+        }
+        
+        let observerNames = SwiftWebViewObserveValueName.allCases
+        for observerName in observerNames {
+            uiView.removeObserver(coordinator, forKeyPath: observerName.rawValue)
         }
     }
 }
